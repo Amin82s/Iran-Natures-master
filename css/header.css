@@ -20,7 +20,6 @@ body {
 header {
   width: 95%;
   height: 730px;
-  background-image: url(./img/hero.jpg);
   background-position: -100px -100px;
   margin: 0 auto;
   margin-top: 30px;
@@ -107,4 +106,171 @@ header {
   width: 100%;
   height: 300px;
   transform: skewY(-7deg);
+}
+
+.menue {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: fixed;
+  right: 10%;
+  top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  z-index: 1000;
+}
+
+.burger input {
+  opacity: 0;
+  z-index: 1000;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+  z-index: 1000;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+
+  z-index: 1000;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+
+  z-index: 1000;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+  z-index: 1000;
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  z-index: 1000;
+  transform: rotate(45deg);
+
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  z-index: 1000;
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  z-index: 1000;
+  transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
+}
+
+.burger__back {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: fixed;
+  right: 10%;
+  top: 10%;
+  cursor: pointer;
+  display: block;
+  transition: transform 1.5s;
+  background: radial-gradient(rgb(68, 127, 68), rgb(117, 255, 117));
+  overflow: hidden;
+}
+.burger input:checked ~ div:nth-of-type(1) {
+  transform: scale(220);
+  background: radial-gradient(
+    rgb(68, 127, 68),
+    rgb(80, 179, 80),
+    rgb(117, 255, 117)
+  );
+  z-index: 100;
+}
+.burger__back-link {
+  position: fixed;
+  top: 16%;
+  right: 40%;
+  transition: all 1s;
+  transform: translate(1000px);
+  transition-timing-function: ease;
+  text-align: center;
+}
+.burger input:checked ~ div:nth-of-type(2) {
+  transform: translate(0px);
+  z-index: 100000;
+}
+
+.back-link {
+  margin-top: 20px;
+  font-size: 2em;
+  line-height: 80px;
+  text-align: center;
+  display: inline-block;
+  width: 250px;
+  height: 80px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+}
+.back-link:hover {
+  color: rgb(68, 127, 68);
+}
+
+.back-link::before,
+.back-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.back-link::before {
+  left: -10px;
+  background: #ffffff;
+}
+
+.back-link::after {
+  right: -10px;
+
+  background: #fffdfd;
+}
+
+.back-link:hover::before,
+.back-link:hover::after {
+  width: 58%;
 }

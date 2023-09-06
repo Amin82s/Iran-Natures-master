@@ -127,7 +127,7 @@ main {
 /* main__center */
 
 .main__center {
-  background-image: url(img/nat-4-small.jpg);
+  /* background-image: url(img/nat-4-small.jpg); */
   background-size: 100% 100%;
   background-repeat: no-repeat;
   width: 100%;
@@ -388,7 +388,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(img/nat-5.jpg);
+  /* background-image: url(img/nat-5.jpg); */
   border-radius: 10px 10px 0 0;
   background-size: 100% 100%;
   width: 100%;
@@ -439,7 +439,7 @@ main {
   padding: 10px;
 }
 #card-2 .front__head-box {
-  background-image: url(img/nat-6.jpg);
+  /* background-image: url(img/nat-6.jpg); */
   border-radius: 10px 10px 0 0;
 }
 #card-2 .front__head-bg {
@@ -456,7 +456,7 @@ main {
   width: 170px;
 }
 #card-3 .front__head-box {
-  background-image: url(img/nat-7.jpg);
+  /* background-image: url(img/nat-7.jpg); */
   border-radius: 10px 10px 0 0;
 }
 #card-3 .front__head-bg {

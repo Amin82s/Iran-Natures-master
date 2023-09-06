@@ -27,7 +27,7 @@ footer {
   align-items: center;
 }
 .footer__form-box {
-  background-image: url(img/nat-10-small.jpg);
+  /* background-image: url(img/nat-10-small.jpg); */
   height: 700px;
   background-size: 100% 100%;
   width: 80%;
